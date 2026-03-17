@@ -1,0 +1,97 @@
+{
+  "projectType": "general",
+  "projectName": "Awesome Gemini Prompts",
+  "projectDescription": "A curated collection of prompt examples, best practices, jailbreaks, system prompts, and specialized role prompts for Google Gemini AI models.",
+  "theme": "palm",
+  "primaryColor": "#295fd7",
+  "lightColor": "#08d5bc",
+  "darkColor": "#cbe0f6",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": ["introduction", "quickstart"]
+          },
+          {
+            "group": "Prompt Best Practices",
+            "pages": [
+              "guides/best-practices",
+              "guides/chinese-language",
+              "guides/prompting-guide-101"
+            ]
+          },
+          {
+            "group": "Prompt Techniques",
+            "pages": [
+              "guides/thinking-chain",
+              "guides/pdca-ask-learning",
+              "guides/gemini-system-prompt"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Prompt Library",
+        "groups": [
+          {
+            "group": "General Use",
+            "pages": [
+              "prompts/overview",
+              "prompts/copilot-prompts",
+              "prompts/research-assistant"
+            ]
+          },
+          {
+            "group": "Specialized Roles",
+            "pages": [
+              "prompts/google-antigravity",
+              "prompts/xiaohongshu-creator",
+              "prompts/ai-personas"
+            ]
+          },
+          {
+            "group": "Advanced",
+            "pages": [
+              "prompts/jailbreak",
+              "prompts/system-prompts"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "FAQ",
+        "groups": [
+          {
+            "group": "FAQ",
+            "pages": ["faq"]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Curated collection of 100+ prompts for Google Gemini",
+    "Bilingual content (English and Chinese)",
+    "Prompt best practices and writing guidelines",
+    "Advanced thinking/reasoning chain prompts",
+    "Specialized role-play and persona prompts",
+    "Jailbreak and system prompt examples",
+    "PDCA-ASK learning methodology prompts",
+    "Google Antigravity agentic coding prompts",
+    "Chinese social media (Xiaohongshu) content creation prompts"
+  ],
+  "publicApiSurface": [
+    "Thinking Chain Engine prompt (深思熟虑版)",
+    "PDCA-ASK Learning Tutor prompt",
+    "Gemini 2.5 System Prompt",
+    "Google Antigravity Fast Mode system prompt",
+    "Google Antigravity Planning Mode system prompt",
+    "Xiaohongshu Monetization Expert prompt",
+    "Jailbreak prompt (Director method)",
+    "Bard jailbreak prompt",
+    "Gemini Pro system prompt"
+  ]
+}
