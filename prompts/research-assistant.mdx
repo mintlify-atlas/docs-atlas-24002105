@@ -1,0 +1,76 @@
+---
+title: "Research Assistant"
+description: "Use Gemini as a powerful research assistant for product comparisons, analysis, and recommendations"
+---
+
+Gemini can act as a structured research assistant: you provide the options and criteria, and it returns a recommendation with supporting analysis. This is especially useful when comparing products, services, or technical tools where you want both a clear recommendation and a balanced view of trade-offs.
+
+## The core research pattern
+
+The most effective research prompts share a common structure:
+
+1. **List the items** you want to compare
+2. **Specify your priorities** — what matters most to you
+3. **Request structured output** — a recommendation, explanation, and comparison table
+
+This pattern forces Gemini to produce a decision, not just a summary.
+
+## Example prompt
+
+The following prompt from the Awesome Gemini Prompts collection illustrates this pattern:
+
+```text Product comparison
+I'm considering these phones: [list models]. Prioritizing camera, speed, and battery life, which would you recommend? Provide a short explanation of your choice, and create a pros and cons table at the end.
+```
+
+Replace `[list models]` with specific phone models, for example: `iPhone 16 Pro, Google Pixel 9 Pro, Samsung Galaxy S25 Ultra`.
+
+## Variations of the pattern
+
+<Tabs>
+  <Tab title="Product comparison">
+    ```text Comparing physical products
+    I'm considering these phones: [list models]. Prioritizing camera, speed, and battery life, which would you recommend? Provide a short explanation of your choice, and create a pros and cons table at the end.
+    ```
+
+    Use this when comparing consumer hardware, appliances, or any physical product with measurable specs.
+  </Tab>
+
+  <Tab title="Service comparison">
+    ```text Comparing services
+    I'm evaluating these project management tools: [list services]. My priorities are ease of use, integrations with Slack and GitHub, and pricing for a team of 10. Which would you recommend? Provide a short explanation and a pros and cons table.
+    ```
+
+    Adapt this for SaaS tools, cloud providers, agencies, or any service where fit-to-requirements matters.
+  </Tab>
+
+  <Tab title="Technical tool comparison">
+    ```text Comparing technical tools
+    I need to choose a frontend framework for a new web app: [list frameworks]. I'm prioritizing developer experience, performance, and ecosystem maturity. Which would you recommend for a team with React experience? Include a pros and cons table.
+    ```
+
+    Use this when evaluating libraries, frameworks, databases, or infrastructure options.
+  </Tab>
+</Tabs>
+
+## Tips for better research results
+
+<Tip>
+  Be specific about ranking criteria. Instead of "good performance," say "sub-200ms response times for a read-heavy API." Specific criteria produce specific, useful comparisons.
+</Tip>
+
+<Tip>
+  Ask for structured output explicitly. Requesting a table, bullet points, or a numbered list ensures the response is easy to scan and share.
+</Tip>
+
+<Tip>
+  Always request pros **and** cons. Asking only for positives produces biased output. Explicitly requesting both sides gives you a more honest analysis.
+</Tip>
+
+<Tip>
+  Use follow-up prompts to go deeper. After getting an initial recommendation, ask: `What are the most common complaints users have about [recommended option]?` or `Under what circumstances would [alternative option] be the better choice?`
+</Tip>
+
+<Note>
+  Gemini's knowledge has a training cutoff. For pricing, availability, or recent product releases, verify the output against current sources before making purchasing decisions.
+</Note>

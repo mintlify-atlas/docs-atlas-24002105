@@ -1,0 +1,128 @@
+---
+title: "FAQ"
+description: "Frequently asked questions about Gemini prompting and the Awesome Gemini Prompts collection"
+---
+
+<AccordionGroup>
+  <Accordion title="What is Google Gemini?">
+    Google Gemini is Google's family of multimodal AI models, capable of understanding and generating text, code, images, audio, and video. It was previously known as **Bard** before being rebranded to Gemini in February 2024.
+
+    Gemini is available through:
+    - [gemini.google.com](https://gemini.google.com/app) — web interface
+    - Google Gemini mobile app (iOS and Android)
+    - Google Workspace (Gmail, Docs, Sheets, Slides)
+    - [Google AI Studio](https://aistudio.google.com) — for developers
+    - [Gemini API](https://ai.google.dev) — for programmatic access
+  </Accordion>
+
+  <Accordion title="What's the difference between Gemini and Bard?">
+    **Bard** was Google's original AI chatbot, launched in March 2023. It was rebranded to **Gemini** in February 2024, alongside the launch of the Gemini model family (Nano, Pro, Ultra). The underlying technology improved significantly with the rebrand.
+
+    Gemini 2.5 Pro and Gemini 2.5 Flash are the current flagship models as of 2025.
+  </Accordion>
+
+  <Accordion title="How do I access Gemini?">
+    **Free access:**
+    - Visit [gemini.google.com](https://gemini.google.com/app) and sign in with a Google account
+    - Use the Gemini mobile app
+
+    **Gemini Advanced (paid):**
+    - Subscribe to Google One AI Premium for access to Gemini 2.5 Pro and Gems
+
+    **Developer access:**
+    - Sign up at [Google AI Studio](https://aistudio.google.com) for free API access
+    - Use the [Gemini API](https://ai.google.dev) with Python, JavaScript, or REST
+  </Accordion>
+
+  <Accordion title="How do I get better Chinese language responses?">
+    Add this phrase to your prompt or system prompt to get consistent Simplified Chinese responses:
+
+    ```
+    使用简体中文回答，符合简体中文的表达习惯
+    ```
+
+    This tells Gemini to respond in Simplified Chinese following natural Chinese expression conventions. Place it at the beginning of your system prompt for best results.
+
+    See the full guide at [Chinese Language Support](/guides/chinese-language).
+  </Accordion>
+
+  <Accordion title="What is LangGPT?">
+    **LangGPT** is a structured prompt engineering framework and community founded by **云中江树** (Yun Zhong Jiang Shu). It focuses on creating reusable, structured prompts for large language models.
+
+    The Awesome Gemini Prompts repository is part of the LangGPT project. You can find more at the [LangGPT GitHub organization](https://github.com/langgptai).
+  </Accordion>
+
+  <Accordion title="What is the PDCA-ASK methodology?">
+    PDCA-ASK is a learning framework that combines the classic PDCA quality cycle with active learning skills:
+
+    - **P (Plan) — 问 (Ask)**: Generate a core question to anchor learning
+    - **D (Do) — 联×用 (Connect × Apply)**: Connect to prior knowledge, apply in practice
+    - **C (Check) — 思 (Think)**: Reflect deeply on results and gaps
+    - **A (Act) — 问-迭代 (Ask-Iterate)**: Form new, better questions
+
+    The [PDCA-ASK Learning Tutor](/guides/pdca-ask-learning) prompt implements this as an AI persona called 叮当猫 · 清静书斋.
+  </Accordion>
+
+  <Accordion title="What Gemini models are these prompts designed for?">
+    Most prompts in this collection work best with:
+    - **Gemini 2.5 Pro** — highest capability, best for complex reasoning tasks
+    - **Gemini 2.5 Flash** — fast and efficient, suitable for most everyday prompts
+
+    The Xiaohongshu persona prompt explicitly targets **Gemini 3.0 Pro**. The Google Antigravity prompts reference **Gemini 2.5 Flash** in the auto-researcher tool.
+  </Accordion>
+
+  <Accordion title="How do I use a system prompt with Gemini?">
+    Via the Gemini API:
+
+    ```python
+    import google.generativeai as genai
+
+    genai.configure(api_key="YOUR_API_KEY")
+    model = genai.GenerativeModel(
+        model_name="gemini-2.5-pro",
+        system_instruction="Your system prompt here"
+    )
+    response = model.generate_content("Your question")
+    ```
+
+    Via Google AI Studio: Open a new chat → click the settings icon → paste your system instruction in the "System Instructions" field.
+
+    See the full guide at [Gemini System Prompts](/guides/gemini-system-prompt).
+  </Accordion>
+
+  <Accordion title="Are the jailbreak prompts safe to use?">
+    The jailbreak prompts are documented for **research and educational purposes only**. Using them may:
+    - Violate Google's [Terms of Service](https://policies.google.com/terms)
+    - Result in account suspension
+    - Produce harmful content
+
+    If you need adjusted content filtering for legitimate purposes (e.g., research, creative writing), use the official [Gemini API safety settings](https://ai.google.dev/gemini-api/docs/safety-settings) instead.
+  </Accordion>
+
+  <Accordion title="What is Xiaohongshu (小红书)?">
+    **Xiaohongshu** (小红书, literally "Little Red Book"), also known as **RED** in English, is a major Chinese social media and e-commerce platform. It combines Instagram-style visual content with Pinterest-style discovery and strong in-app shopping features.
+
+    It has over 300 million monthly active users, primarily in China. The platform is particularly popular for lifestyle, beauty, fashion, travel, and food content.
+
+    The [Xiaohongshu Creator](/prompts/xiaohongshu-creator) prompt in this collection is a monetization strategy expert for creators on this platform.
+  </Accordion>
+
+  <Accordion title="What is Google Antigravity?">
+    **Antigravity** is described in the community-sourced prompts as "a powerful agentic AI coding assistant designed by the Google DeepMind team working on Advanced Agentic Coding."
+
+    The [Google Antigravity prompts](/prompts/google-antigravity) in this collection were shared by the community and appear to be internal system prompts for an agentic pair-programming AI. They have not been officially confirmed or released by Google.
+  </Accordion>
+
+  <Accordion title="Can I contribute my own prompts?">
+    Yes! The repository is open source under the CC0-1.0 license. You can contribute by:
+    1. Forking the repository at [github.com/langgptai/awesome-gemini-prompts](https://github.com/langgptai/awesome-gemini-prompts)
+    2. Adding your prompt file to the `prompts/` directory
+    3. Opening a pull request
+
+    You can also directly edit the `README.md` on GitHub using the "Edit this file" button.
+  </Accordion>
+
+  <Accordion title="What license does this collection use?">
+    The collection is licensed under **CC0-1.0** (Creative Commons Zero), which effectively places it in the public domain. You can use, modify, and distribute any prompts in this collection freely, even for commercial purposes, without attribution.
+  </Accordion>
+</AccordionGroup>

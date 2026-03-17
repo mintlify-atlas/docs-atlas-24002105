@@ -1,0 +1,119 @@
+---
+title: "Gemini for Google Workspace Prompting Guide 101"
+description: "An overview of the official Google prompting guide for Gemini in Google Workspace"
+---
+
+Google publishes an official prompting guide specifically for Gemini in Google Workspace. The guide is available as a PDF in this project at `docs/gemini-for-google-workspace-prompting-guide-101.pdf` and covers how to get the most out of Gemini across Gmail, Google Docs, Sheets, Slides, and Meet.
+
+<Note>
+  For the latest official guidance, refer to the [Google Workspace Learning Center](https://workspace.google.com/intl/en/features/) and the Gemini for Google Workspace documentation.
+</Note>
+
+## Workspace use cases
+
+<CardGroup cols={2}>
+  <Card title="Gmail" icon="mail">
+    Draft, reply to, and summarize emails. Gemini can generate full email drafts from bullet points and match your preferred tone.
+  </Card>
+  <Card title="Google Docs" icon="file-text">
+    Summarize long documents, rewrite sections, generate first drafts, and analyze content for key insights.
+  </Card>
+  <Card title="Google Sheets" icon="table">
+    Generate formulas, summarize tabular data, classify content in columns, and create structured data from unstructured text.
+  </Card>
+  <Card title="Google Slides" icon="presentation">
+    Generate slide outlines, draft speaker notes, suggest visual structure, and create presentation content from documents.
+  </Card>
+  <Card title="Google Meet" icon="video">
+    Summarize meeting notes, generate action items, and produce transcripts of recorded meetings.
+  </Card>
+</CardGroup>
+
+---
+
+## Prompting patterns by Workspace app
+
+<Tabs>
+  <Tab title="Gmail">
+    Use Gemini in Gmail to draft messages quickly by describing the intent and key points.
+
+    ```text
+    Draft a short, friendly email introducing myself as a freelance [your expertise]. Include these points: [list your key skills]. End with a question to encourage a response.
+    ```
+
+    **Tips for Gmail prompts:**
+    - Specify tone: "formal", "friendly", "brief"
+    - Include the recipient context: "to a new client", "to my manager"
+    - State desired length: "under 100 words", "3 short paragraphs"
+  </Tab>
+
+  <Tab title="Google Docs">
+    Gemini in Docs can both generate and analyze content. The most powerful pattern is combining summarization with analysis in a single prompt.
+
+    ```text
+    In Google Docs, please summarize this market research report into a few bullet points. Then, analyze the data to highlight the top three opportunities for my business, along with any potential risks I should be aware of.
+    ```
+
+    This example demonstrates **advanced summarization**: rather than just asking for a summary, you chain it with an analysis step to extract actionable insights.
+
+    **Tips for Docs prompts:**
+    - Reference the document directly when Gemini has access to it
+    - Ask for output in a specific format: "bullet points", "numbered list", "table"
+    - Chain tasks: "summarize... then analyze... then suggest..."
+  </Tab>
+
+  <Tab title="Google Sheets">
+    Use Gemini in Sheets to work with formulas and structured data.
+
+    ```text
+    I have a column of customer feedback in column A. Classify each entry as Positive, Neutral, or Negative and put the result in column B.
+    ```
+
+    **Tips for Sheets prompts:**
+    - Reference specific columns or ranges
+    - Ask Gemini to explain formulas it generates
+    - Describe the desired output format clearly
+  </Tab>
+
+  <Tab title="Google Slides">
+    Use Gemini in Slides to scaffold presentations from documents or outlines.
+
+    ```text
+    Create a 5-slide presentation outline for a quarterly business review covering: revenue summary, top wins, challenges, key metrics, and next quarter priorities.
+    ```
+
+    **Tips for Slides prompts:**
+    - Specify the number of slides
+    - List the sections or topics to cover
+    - Ask for speaker notes separately: "also generate speaker notes for each slide"
+  </Tab>
+
+  <Tab title="Google Meet">
+    After a recorded meeting, use Gemini to extract structured information from the transcript.
+
+    ```text
+    Summarize this meeting transcript. List all action items with the responsible person and any mentioned deadlines.
+    ```
+
+    **Tips for Meet prompts:**
+    - Ask for action items in a structured format
+    - Request a summary by topic or agenda item
+    - Specify the audience: "write a summary suitable for stakeholders who didn't attend"
+  </Tab>
+</Tabs>
+
+---
+
+## Advanced summarization example
+
+The following prompt from the Awesome Gemini Prompts collection demonstrates how to combine summarization with business analysis in Google Docs:
+
+```text
+In Google Docs, please summarize this market research report into a few bullet points. Then, analyze the data to highlight the top three opportunities for my business, along with any potential risks I should be aware of.
+```
+
+This pattern is effective because it:
+
+- **Scopes the task** — "a few bullet points" sets a concise output expectation
+- **Chains two operations** — summary first, then analysis, in a logical sequence
+- **Frames the analysis** — "for my business" and "risks I should be aware of" make the output actionable rather than generic

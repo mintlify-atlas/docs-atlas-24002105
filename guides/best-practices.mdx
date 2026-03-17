@@ -1,0 +1,154 @@
+---
+title: "Prompt Best Practices"
+description: "Essential guidelines for writing effective prompts for Google Gemini"
+---
+
+Writing effective prompts is the foundation of getting useful, accurate responses from Gemini. These five practices apply whether you're using Gemini directly, via Google Workspace, or through the API.
+
+## Five core best practices
+
+<AccordionGroup>
+  <Accordion title="1. Use natural language">
+    Write prompts the way you would speak or write to a knowledgeable colleague. Gemini is trained on human language and responds best when prompts feel natural rather than overly formal or keyword-stuffed.
+
+    **Example:**
+    ```text
+    Explain the difference between a REST API and a GraphQL API as if I'm a developer who has only worked with REST before.
+    ```
+
+    <Tip>
+      Avoid writing prompts like search engine queries (e.g., "REST API vs GraphQL differences"). Full sentences produce better results.
+    </Tip>
+  </Accordion>
+
+  <Accordion title="2. Be clear and concise">
+    State exactly what you want without unnecessary padding. Ambiguous or overly wordy prompts can lead to vague responses. Get to the point, but include all relevant information.
+
+    **Example:**
+    ```text
+    Write a 3-sentence product description for a noise-cancelling travel headphone aimed at frequent flyers.
+    ```
+
+    <Note>
+      Clarity and conciseness are not the same as brevity. A longer prompt that is specific and well-structured is better than a short prompt that is vague.
+    </Note>
+  </Accordion>
+
+  <Accordion title="3. Provide context">
+    Give Gemini the background it needs to tailor its response. Context includes your role, your audience, the purpose of the output, and any relevant constraints.
+
+    **Example:**
+    ```text
+    I'm a high school teacher preparing a lesson for 16-year-olds with no prior programming experience. Explain what a variable is in programming using a real-world analogy.
+    ```
+  </Accordion>
+
+  <Accordion title="4. Use specific and relevant keywords">
+    Include domain-specific terms, formats, or style indicators that help Gemini understand exactly what kind of output you need. This is especially useful when writing prompts for technical, legal, or creative content.
+
+    **Example:**
+    ```text
+    Draft a formal business proposal introduction for a SaaS company pitching a CRM solution to enterprise clients in the healthcare sector.
+    ```
+
+    <Tip>
+      Keywords like "formal", "bullet points", "markdown table", "under 200 words", or "step-by-step" give Gemini clear formatting and style signals.
+    </Tip>
+  </Accordion>
+
+  <Accordion title="5. Break down complex tasks into separate prompts">
+    For multi-step or complex tasks, don't try to accomplish everything in a single prompt. Split the work into logical stages and iterate — use one prompt per distinct task.
+
+    **Example (instead of one giant prompt):**
+
+    Step 1:
+    ```text
+    List the five most important factors to consider when choosing a cloud hosting provider for a startup.
+    ```
+
+    Step 2:
+    ```text
+    Now compare AWS, Google Cloud, and Azure on each of those five factors in a markdown table.
+    ```
+
+    <Note>
+      Breaking tasks down also makes it easier to spot where a response went wrong and to retry just that step.
+    </Note>
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Types of prompts
+
+The following prompt categories cover the most common use cases from the Awesome Gemini Prompts collection. Each example is drawn directly from the Copilot section of the project.
+
+<AccordionGroup>
+  <Accordion title="Study plans">
+    Use Gemini to create structured, time-bound study plans for learning a new skill or subject.
+
+    ```text
+    Create a 12-week study plan for learning a new language: Italian
+    ```
+  </Accordion>
+
+  <Accordion title="Travel plans">
+    Ask Gemini to handle research and logistics for trips, including accommodation and packing.
+
+    ```text
+    Find hotels in Phuket for a week in March and suggest a packing list
+    ```
+  </Accordion>
+
+  <Accordion title="Article writing">
+    Generate blog posts and articles in a specific style or voice by naming the format.
+
+    ```text
+    write a medium-style blog post about [xx]
+    ```
+
+    <Tip>
+      Replace `[xx]` with your topic. Naming a publication style (e.g., "Medium-style", "HBR-style") helps Gemini match tone and structure.
+    </Tip>
+  </Accordion>
+
+  <Accordion title="Advanced summarization">
+    Combine summarization with analysis to extract actionable insights from documents.
+
+    ```text
+    In Google Docs, please summarize this market research report into a few bullet points. Then, analyze the data to highlight the top three opportunities for my business, along with any potential risks I should be aware of.
+    ```
+
+    <Note>
+      This pattern works especially well in Google Workspace where Gemini can access document content directly.
+    </Note>
+  </Accordion>
+
+  <Accordion title="Code debugging">
+    Provide the error message and the relevant code section for targeted debugging help.
+
+    ```text
+    I'm getting the following error in my Android Studio project: [insert error message]. Here's the relevant code section: [insert code]. Can you help me debug this issue and suggest a fix?
+    ```
+  </Accordion>
+
+  <Accordion title="Email drafting">
+    Draft professional emails quickly by specifying your role, key points, and a desired call to action.
+
+    ```text
+    Draft a short, friendly email introducing myself as a freelance [your expertise]. Include these points: [list your key skills]. End with a question to encourage a response.
+    ```
+  </Accordion>
+
+  <Accordion title="Brainstorming">
+    Use structured brainstorming prompts that include constraints to get more creative and focused ideas.
+
+    ```text
+    Give me three fantasy short story ideas that include a magical object and a reluctant hero.
+    ```
+
+    <Tip>
+      Adding constraints (e.g., "must include X", "under 100 words each", "targeted at children") produces more useful brainstorming output than open-ended requests.
+    </Tip>
+  </Accordion>
+</AccordionGroup>

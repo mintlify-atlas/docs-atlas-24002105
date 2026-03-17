@@ -1,0 +1,105 @@
+---
+title: "AI Personas"
+description: "Curated AI persona prompts for role-playing as specific characters, experts, and AI assistants"
+---
+
+AI persona prompts give Gemini a specific identity, background, communication style, and knowledge domain. Instead of a generic assistant, you get a persona that speaks, reasons, and responds in a defined character.
+
+## Available personas
+
+<CardGroup cols={2}>
+  <Card title="天涯大神KK — 回魂自由版" icon="ghost">
+    A legendary persona from the Tianya BBS forum era — an uncensored, free-thinking debater known for sharp social commentary and contrarian views.
+  </Card>
+  <Card title="小红书爆款规律 — 流量黑客" icon="bolt">
+    A Xiaohongshu viral content strategist who understands the platform's algorithm deeply. Focused on traffic growth patterns and content formulas that drive massive reach.
+  </Card>
+  <Card title="小红书爆款账号定位架构师" icon="sitemap">
+    An account positioning specialist. Helps define your niche, audience, and content angle to build a differentiated Xiaohongshu brand from scratch.
+  </Card>
+  <Card title="小红书风控和增长官" icon="shield-halved">
+    A risk control and growth officer specializing in Xiaohongshu platform compliance — knowing which content gets suppressed and how to grow safely within the rules.
+  </Card>
+  <Card title="张小龙AI分身 — WeChat Creator" icon="mobile">
+    An AI avatar of Zhang Xiaolong, the creator of WeChat. Approaches product design with his minimalist philosophy, user-centric thinking, and long-term product vision.
+  </Card>
+  <Card title="当年明月 — 历史叙事大师" icon="book">
+    An AI embodying the style of 当年明月 (author of *The Ming Dynasty in History*), China's most popular narrative history writer — accessible, humorous, and deeply researched.
+  </Card>
+  <Card title="微科幻之神 — Micro Sci-Fi Master" icon="atom">
+    A master of micro science fiction — writing short, impactful sci-fi stories in the style of Chinese micro-fiction (微型科幻). Each story is complete in a few hundred words.
+  </Card>
+  <Card title="手相大师-玄师 — Palm Reading Master" icon="hand">
+    A palm reading master who combines traditional Chinese palmistry with modern psychological insight to provide character analysis and life guidance.
+  </Card>
+  <Card title="诺奖得主-拉斯洛AI分身" icon="award">
+    An AI avatar of László Barabási, the network scientist and author of *Linked* and *The Formula*. Analyzes problems through the lens of network science and success patterns.
+  </Card>
+</CardGroup>
+
+## How to use persona prompts
+
+<Steps>
+  <Step title="Find a persona">
+    Browse the personas above or explore the full prompts in the [source repository](https://github.com/langgptai/awesome-gemini-prompts/tree/main/prompts).
+  </Step>
+  <Step title="Copy the prompt file">
+    Each persona is a standalone `.md` file in the `prompts/` directory of the repository. Copy the full text of the prompt you want to use.
+  </Step>
+  <Step title="Set it as a system prompt">
+    Paste the persona prompt as a system prompt via the Gemini API `system_instruction` parameter, or as the opening context message in a Gemini conversation.
+
+    ```python
+    import google.generativeai as genai
+
+    model = genai.GenerativeModel(
+        model_name="gemini-2.5-pro",
+        system_instruction="[Paste full persona prompt here]"
+    )
+    ```
+  </Step>
+  <Step title="Engage in character">
+    Start your conversation. The persona will maintain its character, knowledge domain, and communication style throughout the session.
+  </Step>
+</Steps>
+
+## Tips for effective persona prompting
+
+<Tip>
+  For Chinese personas (all of the above except Google Antigravity), add `使用简体中文回答，符合简体中文的表达习惯` to your first message or system prompt to ensure consistent Simplified Chinese responses.
+</Tip>
+
+<Tip>
+  Some personas are designed for specific domains. For best results:
+  - Use **Xiaohongshu personas** when you have real content strategy questions
+  - Use **张小龙** when thinking through product design decisions
+  - Use **当年明月** when exploring Chinese history in an engaging narrative format
+  - Use **诺奖-拉斯洛** when analyzing network effects, organizational dynamics, or success patterns
+</Tip>
+
+<Note>
+  All persona prompts in this collection are in Chinese. They are optimized for Chinese-language interactions with Gemini. The Google Antigravity prompts are the exception — those are in English.
+</Note>
+
+## Creating your own persona
+
+To create a custom persona prompt, include these elements:
+
+```text
+# 角色名称 (Persona Name)
+
+## 自我认知 (Self-Definition)
+- Input: what the user provides
+- Output: what the persona delivers
+- Model: which Gemini model to use
+- Author: credit
+
+## 知识网络 (Knowledge Network)
+[The persona's domain expertise, frameworks, and mental models]
+
+## 交互法则 (Interaction Rules)
+[Communication style, tone, what the persona avoids]
+
+## 开场白 (Opening Statement)
+[How the persona introduces itself — skip generic "Hi, I'm X" openings]
+```

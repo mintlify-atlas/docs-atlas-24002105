@@ -1,122 +1,92 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Awesome Gemini Prompts",
+  "theme": "palm",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#295fd7",
+    "light": "#08d5bc",
+    "dark": "#cbe0f6"
   },
   "favicon": "/favicon.svg",
+  "logo": {
+    "dark": "https://media.brand.dev/0e69a1cc-0f0b-42cb-a99f-f6d33cbc407b.png",
+    "light": "https://media.brand.dev/0e69a1cc-0f0b-42cb-a99f-f6d33cbc407b.png"
+  },
+  "navbar": {
+    "primary": {
+      "type": "github",
+      "href": "https://github.com/langgptai/awesome-gemini-prompts"
+    }
+  },
+  "footer": {
+    "socials": {
+      "github": "https://github.com/langgptai/awesome-gemini-prompts"
+    }
+  },
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Documentation",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Get Started",
+            "pages": ["introduction", "quickstart"]
+          },
+          {
+            "group": "Prompt Best Practices",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "guides/best-practices",
+              "guides/chinese-language",
+              "guides/prompting-guide-101"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Prompt Techniques",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "guides/thinking-chain",
+              "guides/pdca-ask-learning",
+              "guides/gemini-system-prompt"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "Prompt Library",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "General Use",
             "pages": [
-              "api-reference/introduction"
+              "prompts/overview",
+              "prompts/copilot-prompts",
+              "prompts/research-assistant"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Specialized Roles",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "prompts/google-antigravity",
+              "prompts/xiaohongshu-creator",
+              "prompts/ai-personas"
+            ]
+          },
+          {
+            "group": "Advanced",
+            "pages": [
+              "prompts/jailbreak",
+              "prompts/system-prompts"
             ]
           }
         ]
-      }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
-  },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "navbar": {
-    "links": [
+      },
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "tab": "FAQ",
+        "groups": [
+          {
+            "group": "FAQ",
+            "pages": ["faq"]
+          }
+        ]
       }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
-    }
-  },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
+    ]
   }
 }

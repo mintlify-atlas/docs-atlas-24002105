@@ -1,0 +1,59 @@
+---
+title: "Chinese Language Support"
+description: "How to get better Chinese language responses from Gemini"
+---
+
+When using Gemini with Chinese-language content, some users encounter garbled output or responses that mix languages unexpectedly. This is a known behavior related to how Gemini handles language encoding and defaults in its generation process.
+
+## The problem
+
+Gemini may produce responses that:
+
+- Mix Simplified Chinese with Traditional Chinese characters inconsistently
+- Default to English mid-response even when the prompt was in Chinese
+- Use phrasing that doesn't match natural Simplified Chinese expression habits
+
+This is particularly common when the system prompt is written in English but the user input is in Chinese.
+
+## The solution
+
+Add the following instruction to your prompt or system prompt to enforce Simplified Chinese output that matches natural expression conventions:
+
+```text
+使用简体中文回答，符合简体中文的表达习惯
+```
+
+This phrase translates to: *"Answer in Simplified Chinese, following the expression habits of Simplified Chinese."*
+
+It does two things:
+
+1. **Specifies the script** — Simplified Chinese (`简体中文`) rather than Traditional Chinese
+2. **Specifies the register** — Responses should match how native Simplified Chinese speakers naturally write, not a literal translation style
+
+## When to use it
+
+Include this instruction whenever:
+
+- Your users are primarily Simplified Chinese speakers
+- You are building a system prompt for a Chinese-language assistant
+- You are getting inconsistent or unnaturally phrased Chinese output from Gemini
+- Your prompts are written in English but you want Chinese responses
+
+## Placement
+
+<Tip>
+  Place this instruction at the **beginning** of your system prompt, before any other instructions. Language and output format directives are most reliably followed when they appear early in the prompt.
+
+  Example system prompt structure:
+  ```text
+  使用简体中文回答，符合简体中文的表达习惯
+
+  你是一个专业的客服助手，帮助用户解决技术问题。
+  ```
+</Tip>
+
+## Evolving support
+
+<Note>
+  Gemini's Chinese language capabilities continue to improve with each model update. The prompt workaround described here addresses behavior observed in earlier versions and may become less necessary over time as Google refines multilingual support. Always test with your specific model version and use case.
+</Note>

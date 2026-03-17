@@ -1,80 +1,101 @@
 ---
 title: "Quickstart"
-description: "Start building awesome documentation in minutes"
+description: "Get started with Awesome Gemini Prompts in a few steps — from opening Gemini to running your first prompt."
 ---
 
-## Get started in three steps
+## Get started with Gemini prompts
 
-Get your documentation site running locally and make your first customization.
+This guide walks you through everything you need to start using prompts from this collection with Google Gemini.
 
-### Step 1: Set up your local environment
+<Steps>
+  <Step title="Open Gemini">
+    Go to [https://gemini.google.com/app](https://gemini.google.com/app) and sign in with your Google account.
 
-<AccordionGroup>
-  <Accordion icon="copy" title="Clone your docs locally">
-    During the onboarding process, you created a GitHub repository with your docs content if you didn't already have one. You can find a link to this repository in your [dashboard](https://dashboard.mintlify.com).
-    
-    To clone the repository locally so that you can make and preview changes to your docs, follow the [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) guide in the GitHub docs.
-  </Accordion>
-  <Accordion icon="rectangle-terminal" title="Start the preview server">
-    1. Install the Mintlify CLI: `npm i -g mint`
-    2. Navigate to your docs directory and run: `mint dev`
-    3. Open `http://localhost:3000` to see your docs live!
-    
-    <Tip>Your preview updates automatically as you edit files.</Tip>
-  </Accordion>
-</AccordionGroup>
+    Gemini (formerly Bard) is Google's AI assistant. It accepts natural language prompts and generates text responses — from short answers to long-form content, code, plans, and more.
 
-### Step 2: Deploy your changes
+    <Tip>
+      You can use Gemini directly in your browser without installing anything. For Google Workspace users, Gemini is also available inside Docs, Gmail, Sheets, and other apps.
+    </Tip>
+  </Step>
 
-<AccordionGroup>
-  <Accordion icon="github" title="Install our GitHub app">
-    Install the Mintlify GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app).
-    
-    Our GitHub app automatically deploys your changes to your docs site, so you don't need to manage deployments yourself.
-</Accordion>
-<Accordion icon="palette" title="Update your site name and colors">
-    For a first change, let's update the name and colors of your docs site.
+  <Step title="Understand the basics of prompt structure">
+    A good prompt gives Gemini enough context to produce a useful response. Before diving into the prompt library, familiarize yourself with the core best practices:
 
-    1. Open `docs.json` in your editor.
-    2. Change the `"name"` field to your project name.
-    3. Update the `"colors"` to match your brand.
-    4. Save and see your changes instantly at `http://localhost:3000`.
+    - **Use natural language** — write prompts as you would explain a task to a person
+    - **Be clear and concise** — avoid vague instructions; state what you want directly
+    - **Provide context** — include relevant background so Gemini can tailor its response
+    - **Use specific and relevant keywords** — precise language produces more accurate output
+    - **Break down complex tasks** — split multi-part requests into separate prompts for better results
 
-    <Tip>Try changing the primary color to see an immediate difference!</Tip>
-  </Accordion>
-</AccordionGroup>
+    For a deeper guide, see [Prompt best practices](/guides/best-practices).
+  </Step>
 
-### Step 3: Go live
+  <Step title="Use your first prompt">
+    Try this example from the official Copilot prompts in the collection:
 
-<Accordion icon="rocket" title="Publish your docs">
-  1. Commit and push your changes.
-  2. Your docs will update and be live in moments!
-</Accordion>
+    ```text
+    Create a 12-week study plan for learning a new language: Italian
+    ```
+
+    Paste this into Gemini and press Enter. Gemini will generate a structured week-by-week plan covering vocabulary, grammar, listening, and speaking practice.
+
+    <Tip>
+      Experiment by swapping "Italian" for any other language, or adding context like your current skill level or available study time per day. More context leads to more tailored output.
+    </Tip>
+
+    Here are a few more prompts from the collection to try:
+
+    ```text
+    write a medium-style blog post about [topic]
+    ```
+
+    ```text
+    Give me three fantasy short story ideas that include a magical object and a reluctant hero.
+    ```
+
+    ```text
+    Draft a short, friendly email introducing myself as a freelance [your expertise]. Include these points: [list your key skills]. End with a question to encourage a response.
+    ```
+  </Step>
+
+  <Step title="Explore the prompt library">
+    The collection includes prompts organized by use case — from everyday productivity and writing to advanced reasoning frameworks and specialized role prompts.
+
+    Browse the full library at [Prompt library](/prompts/overview) to find prompts for your specific needs.
+
+    <Tip>
+      If you find a prompt that works well, adapt it. The best prompts are ones you've tuned to your own context and goals.
+    </Tip>
+  </Step>
+</Steps>
+
+## Using Gemini in Chinese
+
+If you want Gemini to respond in Simplified Chinese — and avoid garbled or mixed-language output — add the following phrase to your prompt:
+
+```text
+使用简体中文回答，符合简体中文的表达习惯
+```
+
+This instructs Gemini to respond in Simplified Chinese in a way that matches natural Chinese expression habits. Add it at the end of any prompt when you want a Chinese-language response.
+
+<Note>
+  This tip comes directly from the source repository. It is especially useful when working with prompts that were originally written in English but need a Chinese-language output.
+</Note>
 
 ## Next steps
 
-Now that you have your docs running, explore these key features:
-
 <CardGroup cols={2}>
-
-<Card title="Write Content" icon="pen-to-square" href="/essentials/markdown">
-  Learn MDX syntax and start writing your documentation.
-</Card>
-
-<Card title="Customize style" icon="palette" href="/essentials/settings">
-  Make your docs match your brand perfectly.
-</Card>
-
-<Card title="Add code examples" icon="square-code" href="/essentials/code">
-  Include syntax-highlighted code blocks.
-</Card>
-
-<Card title="API documentation" icon="code" href="/api-reference/introduction">
-  Auto-generate API docs from OpenAPI specs.
-</Card>
-
+  <Card title="Prompt best practices" icon="lightbulb" href="/guides/best-practices">
+    A full guide to writing effective Gemini prompts — context, structure, and iteration.
+  </Card>
+  <Card title="Prompt techniques" icon="brain" href="/guides/thinking-chain">
+    Advanced chain-of-thought and reasoning frameworks for deeper Gemini responses.
+  </Card>
+  <Card title="Prompt library" icon="layer-group" href="/prompts/overview">
+    Browse the full collection of ready-to-use prompts organized by category.
+  </Card>
+  <Card title="Introduction" icon="book-open" href="/introduction">
+    Learn more about the project, what's included, and who it's for.
+  </Card>
 </CardGroup>
-
-<Note>
-  **Need help?** See our [full documentation](https://mintlify.com/docs) or join our [community](https://mintlify.com/community).
-</Note>
